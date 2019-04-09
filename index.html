@@ -52,6 +52,34 @@
 	</section>
 	<div class="project" id="proj1">
 		<h1>Project 1</h1>
+		<h1>Intro<h1>
+<p>For my first negotiated project I decided to try and build a simple isometric game. My game was going to be a lawn mower that would mow down weeds.
+    It was going to be continuous and you would score points based on how many weeds you cut down.  My objectives were:
+  	
+ <p>
+	<li> Set up an isometric camera </li>
+  	<li> To get the player character to move around </li>
+  	<li>Get a basic spawner</li>
+  	<li>Get an understanding of C#</li>
+	
+	<h1>Method</h1>
+	<p>The first thing I did in my project was to set up the Isometric camera. This was really simple nevertheless I searched up an online tutorial to help me set it up, 
+	the one I used is by Studica News and they explained it really well. Their system uses the camera’s position and rotation along with some hotkeys you add in.
+Next I needed to create the player character. This was pretty simple. I collected a bunch of objects in the Unity engine and arranged them into the shape of a lawn mower. 
+	</p>
+	<p>After creating the player character I then set out to create a basic enemy spawner using the ‘instantiate’ variable, which essentially clones an object. The first thing I had to do here was covert my game object into a prefab, then I had to figure out how instantiate works. After I figured how that works I had to find a way to generate 2 random variables for x and z.  To generate these random values I used floats, where float one was going to be x and float two was going to be z.  Then I’d have to plug these into the instantiate line.
+	</p> 
+	
+	<h1>Problems</h1>
+	<p>Let’s start with the Player Character (the lawn mower).</p>
+	<img src="lawnmower.png">
+ <p>I’d had some difficulties setting the collision because I’d made the lawn mower in Unity out of shapes provided and so each of those shapes had its own collision box. The solution to this was really simple, all I had to do was remove the collision boxes on each individual object and then add one collision box for the whole thing. I also had some difficulties when locking the objects to one parent object because once locked, the child objects would re-scale themselves. This meant that I’d then have to re-scale the objects to fit so now if you look at my player character you can probably see some overlapping with the handle.
+</p>
+<div class="lawn_mower_image">
+<img> 
+	
+
+
 		
 	</div>
 	<div class="project" id="proj2">
