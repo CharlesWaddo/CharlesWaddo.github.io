@@ -53,10 +53,10 @@
 	<div class="project" id="proj1">
 		<h1>Project 1</h1>
 		<h1>Intro<h1>
-<p>For my first negotiated project I decided to try and build a simple isometric game. My game was going to be a lawn mower that would mow down weeds.
+	<p>For my first negotiated project I decided to try and build a simple isometric game. My game was going to be a lawn mower that would mow down weeds.
     It was going to be continuous and you would score points based on how many weeds you cut down.  My objectives were:
   	
- <p>
+	<p>
 	<li> Set up an isometric camera </li>
   	<li> To get the player character to move around </li>
   	<li>Get a basic spawner</li>
@@ -67,16 +67,39 @@
 	the one I used is by Studica News and they explained it really well. Their system uses the camera’s position and rotation along with some hotkeys you add in.
 Next I needed to create the player character. This was pretty simple. I collected a bunch of objects in the Unity engine and arranged them into the shape of a lawn mower. 
 	</p>
-	<p>After creating the player character I then set out to create a basic enemy spawner using the ‘instantiate’ variable, which essentially clones an object. The first thing I had to do here was covert my game object into a prefab, then I had to figure out how instantiate works. After I figured how that works I had to find a way to generate 2 random variables for x and z.  To generate these random values I used floats, where float one was going to be x and float two was going to be z.  Then I’d have to plug these into the instantiate line.
+	<p>After creating the player character I then set out to create a basic enemy spawner using the 'instantiate' variable, which essentially clones an object.
+	The first thing I had to do here was covert my game object into a prefab, then I had to figure out how instantiate works. 
+	After I figured how that works I had to find a way to generate 2 random variables for x and z.
+	To generate these random values I used floats, where <b>float one</b> was going to be x and <b>float two</b> was going to be z.
+	Then I'd have to plug these into the instantiate line.
 	</p> 
 	
 	<h1>Problems</h1>
-	<p>Let’s start with the Player Character (the lawn mower).</p>
+	<p>Let's start with the Player Character (the lawn mower).</p>
 	<img src="lawnmower.png">
- <p>I’d had some difficulties setting the collision because I’d made the lawn mower in Unity out of shapes provided and so each of those shapes had its own collision box. The solution to this was really simple, all I had to do was remove the collision boxes on each individual object and then add one collision box for the whole thing. I also had some difficulties when locking the objects to one parent object because once locked, the child objects would re-scale themselves. This meant that I’d then have to re-scale the objects to fit so now if you look at my player character you can probably see some overlapping with the handle.
-</p>
-<div class="lawn_mower_image">
-<img> 
+	<p>I'd had some difficulties setting the collision because I'd made the lawn mower in Unity out of shapes provided and so each of those shapes had its own collision box.
+	The solution to this was really simple, all I had to do was remove the collision boxes on each individual object and then add one collision box for the whole thing.
+	I also had some difficulties when locking the objects to one parent object because once locked, the child objects would re-scale themselves.
+	This meant that I'd then have to re-scale the objects to fit so now if you look at my player character you can probably see some overlapping with the handle.
+	</p>
+	<div class="lawn_mower_image">
+	 
+
+	<p>The enemy spawner script was painful to make because, I'll admit that it was out of my depth to start coding something like that.
+	The first thing that I had difficulties with was turning the enemy 3d model into a prefab, but after reading a bit about it proved really simple.
+	The next thing I had difficulties with was generating 2 different variables for my x and z coordinates, now this is an ongoing issue that I can't seem to fix at the moment.
+	After doing some research online I found that the best way to do this was to create 2 different floats that generate a random number and then plug these to floats into the X and Z coordinate spaces for the instantiate line.
+	Unfortunately this didn't work and I am yet to fix my code.
+	</p>
+ 
+	<h1>Discussion</h1>
+	<p>In the end the project that I managed to produce (if you remove the spawner code) was a lawn mower that could be controlled with W, A, S, D movement across a white plain from an isometric camera perspective.
+	If I was to do this project again one of the main things I'd look at improving is my understanding of coding in Unity as that was one of the most time consuming elements of my project.         
+	</p>
+	<br>
+	<br>
+ 
+ 
 	
 
 
